@@ -1,0 +1,40 @@
+<div class="container mt-4">
+  <h2 class="mb-3">Add New User</h2>
+
+ 
+  <div class="mb-3 row">
+    <div class="col">
+      <input type="text" [(ngModel)]="newUsers.title" class="form-control" placeholder="Enter Title">
+    </div>
+    <div class="col">
+      <input type="text" [(ngModel)]="newUsers.body" class="form-control" placeholder="Enter Body">
+    </div>
+    <div class="col">
+      <button class="btn btn-primary" (click)="addPerson()">Add User</button>
+    </div>
+  </div>
+
+  
+  <h2 class="mt-4 mb-3">User List</h2>
+  <table class="table table-bordered table-striped">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">User ID</th>
+        <th scope="col">Title</th>
+        <th scope="col">Body</th>
+        <th scope="col">Action</th> 
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of person">
+        <td>{{ i.userId }}</td>
+        <td>{{ i.title }}</td>
+        <td>{{ i.body }}</td>
+        <td>
+  <button class="btn btn-danger btn-sm" (click)="deletePerson(+i.userId)">Delete</button>
+
+</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

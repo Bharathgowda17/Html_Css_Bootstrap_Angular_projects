@@ -1,0 +1,110 @@
+<div class="container mt-5">
+   <h3 class="text-center mb-4 text-primary">USER REGISTRATION FORM</h3>
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="mb-4 p-4 border rounded bg-light shadow-sm" novalidate>
+
+    <!-- Name Field -->
+    <div class="mb-3">
+      <label class="form-label">Name</label>
+      <input type="text" class="form-control" formControlName="name" placeholder="Enter your name" />
+      <div class="text-danger" *ngIf="f['name'].touched && f['name'].invalid">
+        <div *ngIf="f['name'].errors?.['required']">Name is required</div>
+        <div *ngIf="f['name'].errors?.['pattern']">
+          Only letters allowed. No numbers/special characters. Should not start with space or number.
+        </div>
+        <div *ngIf="f['name'].errors?.['minlength']">Minimum 2 characters</div>
+      </div>
+    </div>
+
+    <!-- Email Field -->
+    <div class="mb-3">
+      <label class="form-label">Email</label>
+      <input type="email" class="form-control" formControlName="email" placeholder="Enter your email" />
+      <div class="text-danger" *ngIf="f['email'].touched && f['email'].invalid">
+        <div *ngIf="f['email'].errors?.['required']">Email is required</div>
+        <div *ngIf="f['email'].errors?.['email']">Enter a valid email</div>
+        <div *ngIf="f['email'].errors?.['pattern']">Email cannot have leading/trailing spaces</div>
+      </div>
+    </div>
+
+    <!-- Phone Field -->
+    <div class="mb-3">
+      <label class="form-label">Phone</label>
+      <input type="text" class="form-control" formControlName="phone" placeholder="Enter your phone" />
+      <div class="text-danger" *ngIf="f['phone'].touched && f['phone'].invalid">
+        <div *ngIf="f['phone'].errors?.['required']">Phone number is required</div>
+        <div *ngIf="f['phone'].errors?.['pattern']">Phone must be 10 digits and start with 2-9</div>
+      </div>
+    </div>
+
+    <!-- Gender -->
+    <div class="mb-3">
+      <label class="form-label d-block">Gender</label>
+      <div class="form-check form-check-inline">
+        <input type="radio" class="form-check-input" id="male" formControlName="gender" value="Male" checked />
+        <label for="male" class="form-check-label">Male</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input type="radio" class="form-check-input" id="female" formControlName="gender" value="Female" />
+        <label for="female" class="form-check-label">Female</label>
+      </div>
+      <div class="text-danger" *ngIf="f['gender'].touched && f['gender'].invalid">Gender is required</div>
+    </div>
+
+    <!-- Skill -->
+    <div class="mb-3">
+      <label class="form-label">Skill</label>
+      <select class="form-select" formControlName="skill">
+        <option value="">Select Skill</option>
+        <option *ngFor="let s of skills" ; [value]="s">{{ s }}</option>
+      </select>
+      <div class="text-danger" *ngIf="f['skill'].touched && f['skill'].invalid">Skill is required</div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="d-flex gap-2">
+      <button type="submit" class="btn btn-primary">{{ isEditMode ? 'Update' : 'Submit' }}</button>
+      <button type="button" class="btn btn-secondary" (click)="onClear()">Clear</button>
+    </div>
+  </form>
+
+  <!-- No Data -->
+  <div *ngIf="users.length === 0" class="alert alert-warning text-center">No data found</div>
+
+  <!-- Data Table -->
+  <div *ngIf="users.length > 0" class="table-responsive">
+    <table class="table table-bordered table-striped shadow-sm">
+      <thead class="table-dark">
+        <tr>
+          <th>SI.NO</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Gender</th>
+          <th>Skill</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let u of paginatedUsers;let i = index">
+          <td>{{ i+1 }}</td>
+          <td>{{ u.name }}</td>
+          <td>{{ u.email }}</td>
+          <td>{{ u.phone }}</td>
+          <td>{{ u.gender }}</td>
+          <td>{{ u.skill }}</td>
+          <td>
+            <button class="btn btn-sm btn-warning me-2" (click)="onEdit(u)">Edit</button>
+            <button class="btn btn-sm btn-danger" (click)="onDelete(u.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Pagination -->
+  <div *ngIf="users.length > 5" class="text-center mt-3">
+    <button class="btn btn-outline-primary btn-sm mx-1" *ngFor="let page of totalPages" (click)="goToPage(page)">
+      {{ page }}
+    </button>
+  </div>
+</div>

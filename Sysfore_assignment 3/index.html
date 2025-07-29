@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Insure Landing Page</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #2b2b2b;
+      background-color: #fff;
+    }
+
+    .page-container {
+      width: 100%;
+    }
+
+    .navbar {
+      display: flex;
+      gap: 40%;
+      /* justify-content: right; */
+      
+      background-color: white;
+      /* align-items: center; */
+    }
+
+   .navbar img {
+      height: 30px;
+      /* justify-content: right; */
+    }
+
+    .nav-links a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: #2b2b2b;
+      font-weight: bold;
+      /* justify-content: right; */
+    }
+
+    .btn-nav {
+      background-color: grey;
+      color: white;
+      padding: 10px;
+      border-radius: 20px;
+    }
+    .page-header{
+    background-color: white;
+    width: fixed;
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px 50px;
+ 
+    }
+
+    .hero {
+      /* background-color: #2b2b3c; */
+      color: white;
+      display: flex;
+      gap: 30%;
+      padding: 10px;
+      width: fixed;
+      width: 1200px;
+      margin-right: auto;
+      margin-left: auto;
+      
+    }
+
+
+    .hero-text p {
+     margin-bottom: 50px;
+     padding-top: 20px;
+    } 
+
+    .btn-light {
+      
+      background-color: white;
+      color: #2b2b2b;
+      padding: 10px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+     
+    }
+
+     .btn-light1 {
+     background-color: white;
+      color: #2b2b2b;
+      padding: 20px;
+      /* border-radius: 40px; */
+      text-decoration: none;
+      font-weight: bold;
+      
+     
+    }
+
+
+    .hero-image img {
+      width: 300px;
+      position: relative;
+      top: 100px;
+      
+    }
+    .hero1{
+        background-color:#2b2b3c ;
+        background-image: url("./Assignment-2/images/bg-pattern-intro-left-desktop.svg"),url("Assignment-2/images/bg-pattern-intro-right-desktop.svg");
+        background-position: left,right;
+        background-repeat: no-repeat;
+        position: relative;
+        
+    }
+    .page-body{
+    background-color:white;
+    width: fixed;
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px 50px;
+    margin-top: 120px;
+    margin-bottom: 50px;
+    }
+
+
+    .features {
+      display: flex;
+      gap: 30px;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .feature img {
+      height: 60px;    }
+
+    /* .feature h3 {
+      margin-bottom: 15px;
+    } */ 
+
+    .feature p {
+      color: #666;
+    }
+
+    .body2{
+    background-color:#2b2b3c;
+    width: fixed;
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 80px;
+    margin-top: 30px;
+
+
+    }
+
+    .cta {
+      background-color: #2b2b3c;
+      color: white;
+      padding: 40px;
+      display: flex;
+      gap: 550px;
+      background-image:url("./Assignment-2/images/bg-pattern-how-we-work-desktop.svg");
+      background-position: right;
+      background-repeat: no-repeat;
+     
+    }
+
+     
+    .main-footer{
+        background-color:#f0f0f0 ;
+        padding: 30px;
+        background-image: url("./Assignment-2/images/bg-pattern-intro-left-desktop.svg");
+        background-position: left;
+        background-repeat: no-repeat;
+        position: relative;
+         
+    }
+
+    .footer {
+    width: fixed;
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    /* background-color: #f0f0f0; */
+    
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-top img {
+      height: 30px;
+    }
+
+    .social-icons img {
+      margin-left: 20px;
+      cursor: pointer;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links div {
+      min-width: 150px;
+    }
+
+    .footer-links h4 {
+      font-size: 14px;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .footer-links p {
+      font-size: 13px;
+      color: #777;
+      margin: 5px 0;
+      cursor: pointer;
+    }
+    .img1 img{
+        position: relative;
+        
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-container">
+    <div class="page-header">
+    <div class="navbar">
+        <div class="logo">
+      <img src="C:\Users\BHARATH GOWDA A\OneDrive\Desktop\SYSFORE\Sysfore_assignment 3\Assignment-2\images\logo.svg" alt="">
+      </div>
+      <div class="nav-links">
+        <a href="#">HOW WE WORK</a>
+        <a href="#">BLOG</a>
+        <a href="#">ACCOUNT</a>
+        <a href="#" class="btn-nav">VIEW PLANS</a>
+      </div>
+    </div>
+    </div>
+     
+   <div class="hero1"> 
+    <div class="hero">
+       
+      <div class="hero-text">
+        <h1>Humanizing your insurance.</h1>
+        <p>Get your life insurance coverage easier and faster. We blend our expertise and technology to help you find the plan that’s right for you. Ensure you and your loved ones are protected.</p>
+        <a href="#" class="btn-light">VIEW PLANS</a>
+      </div>
+      <div class="hero-image">
+        <img src="C:\Users\BHARATH GOWDA A\OneDrive\Desktop\SYSFORE\Sysfore_assignment 3\Assignment-2\images\image-intro-desktop.jpg" alt="">
+      </div>
+    </div>
+    </div> 
+
+  <div class="page-body">
+    <div class="features-section">
+      <h2>We're different</h2>
+      <div class="features">
+        <div class="feature">
+          <img src="C:\Users\BHARATH GOWDA A\OneDrive\Desktop\SYSFORE\Sysfore_assignment 3\Assignment-2\images/icon-snappy-process.svg" alt="Snappy">
+          <h3>Snappy Process</h3>
+          <p>Our application process can be completed in minutes, not hours. Don’t get stuck filling in tedious forms.</p>
+        </div>
+        <div class="feature">
+          <img src="C:\Users\BHARATH GOWDA A\OneDrive\Desktop\SYSFORE\Sysfore_assignment 3\Assignment-2\images/icon-affordable-prices.svg" alt="Affordable">
+          <h3>Affordable Prices</h3>
+          <p>We don’t want you worrying about high monthly costs. Our prices may be low, but we still offer the best coverage possible.</p>
+        </div>
+        <div class="feature">
+          <img src="C:\Users\BHARATH GOWDA A\OneDrive\Desktop\SYSFORE\Sysfore_assignment 3\Assignment-2\images/icon-people-first.svg" alt="People First">
+          <h3>People First</h3>
+          <p>Our plans aren’t full of conditions and clauses to prevent payouts. We make sure you’re covered when you need it.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    <div class=" body2">
+    <div class="cta">
+      <h2>Find out more about how we work</h2>
+      <a href="#" class="btn-light1">HOW WE WORK</a>
+    </div>
+    </div>
+     
+    <div class="main-footer">
+    <div class="footer">
+      <div class="footer-top">
+        <img src="C:\Users\BHARATH GOWDA A\OneDrive\Desktop\SYSFORE\Sysfore_assignment 3\Assignment-2\images/logo.svg" alt="logo">
+        <div class="social-icons">
+          <img src="C:\Users\BHARATH GOWDA A\OneDrive\Desktop\SYSFORE\Sysfore_assignment 3\Assignment-2\images/icon-facebook.svg" alt="Facebook">
+          <img src="C:\Users\BHARATH GOWDA A\OneDrive\Desktop\SYSFORE\Sysfore_assignment 3\Assignment-2\images/icon-twitter.svg" alt="Twitter">
+          <img src="C:\Users\BHARATH GOWDA A\OneDrive\Desktop\SYSFORE\Sysfore_assignment 3\Assignment-2\images/icon-pinterest.svg" alt="Pinterest">
+          <img src="C:\Users\BHARATH GOWDA A\OneDrive\Desktop\SYSFORE\Sysfore_assignment 3\Assignment-2\images/icon-instagram.svg" alt="Instagram">
+        </div>
+      </div>
+      <hr>
+      <div class="footer-links">
+        <div>
+          <h4>Our Company</h4>
+          <p>HOW WE WORK</p>
+          <p>WHY INSURE?</p>
+          <p>VIEW PLANS</p>
+          <p>REVIEWS</p>
+        </div>
+        <div>
+          <h4>Help Me</h4>
+          <p>FAQ</p>
+          <p>TERMS OF USE</p>
+          <p>PRIVACY POLICY</p>
+          <p>COOKIES</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>SALES</p>
+          <p>SUPPORT</p>
+          <p>LIVE CHAT</p>
+        </div>
+        <div>
+          <h4>Others</h4>
+          <p>CAREERS</p>
+          <p>PRESS</p>
+          <p>LICENSES</p>
+        </div>
+      </div>
+    </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

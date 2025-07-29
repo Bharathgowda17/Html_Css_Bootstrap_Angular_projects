@@ -1,0 +1,25 @@
+
+        .main {
+            background-color: #2dd7a4;
+            color: white;
+            
+        }
+
+        .features{
+              background-color: #f4f5f7;
+              border: none;
+        }
+
+       .hero p{
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+        .card-1 img{
+            background-color:#2dd7a4 ;
+           
+        }
+        .card{
+            background-color:  #f4f5f7;
+            border: none;
+        }
+        

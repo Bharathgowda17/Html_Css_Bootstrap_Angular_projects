@@ -1,0 +1,10 @@
+<h2>Clubs</h2>
+<input [(ngModel)]="newClubName" placeholder="New club name">
+<button (click)="addClub()">Add Club</button>
+
+<ul>
+  <li *ngFor="let club of clubs">
+    {{ club.id }}: {{ club.name }}
+    <button (click)="deleteClub(club.id)">Delete</button>
+  </li>
+</ul>
