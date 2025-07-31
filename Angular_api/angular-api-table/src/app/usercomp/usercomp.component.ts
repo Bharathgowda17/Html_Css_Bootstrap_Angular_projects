@@ -5,12 +5,11 @@ import { person } from '../models/person';
 @Component({
   selector: 'app-usercomp',
   templateUrl: './usercomp.component.html',
-  styleUrls: ['./usercomp.component.css'] 
+  styleUrls: ['./usercomp.component.css']
 })
 export class UsersComponent implements OnInit {
 
   person: person[] = [];
-
 
   newUsers: person = {
     userId: '0',
@@ -18,13 +17,14 @@ export class UsersComponent implements OnInit {
     body: ''
   };
 
+  editMode: boolean = false;
+
   constructor(private apiService: ApiServicesService) {}
 
   ngOnInit() {
     this.getPerson();
   }
 
-  
   getPerson() {
     this.apiService.getPerson().subscribe({
       next: (res) => {
@@ -37,30 +37,51 @@ export class UsersComponent implements OnInit {
     });
   }
 
-  
   addPerson() {
-    this.apiService.addPerson(this.newUsers).subscribe({
-      next: (res) => {
-        console.log("Person added");
-        this.getPerson(); 
+    if (this.editMode) {
+      this.updatePerson();
+    } else {
+      this.apiService.addPerson(this.newUsers).subscribe({
+        next: (res) => {
+          console.log("Person added");
+          this.newUsers = { userId: '0', title: '', body: '' };
+          this.getPerson();
+        },
+        error: (err) => {
+          console.log(err);
+        }
+      });
+    }
+  }
+
+  editPerson(user: person) {
+    this.newUsers = { ...user };
+    this.editMode = true;
+  }
+
+  updatePerson() {
+    this.apiService.updateUser(+this.newUsers.userId, this.newUsers).subscribe({
+     next: (res: any) => {
+        console.log("User updated:", res);
+        this.newUsers = { userId: '0', title: '', body: '' };
+        this.editMode = false;
+        this.getPerson();
       },
-      error: (err) => {
-        console.log(err);
+      error: (err: any) => {
+        console.error("Update error:", err);
       }
     });
   }
 
-
   deletePerson(userId: number) {
-  this.apiService.deleteUser(userId).subscribe({
-    next: (res) => {
-      console.log("User deleted:", res);
-      this.getPerson(); 
-    },
-    error: (err) => {
-      console.error("Delete error:", err);
-    }
-  });
-}
-
+    this.apiService.deleteUser(userId).subscribe({
+      next: (res) => {
+        console.log("User deleted:", res);
+        this.getPerson();
+      },
+      error: (err) => {
+        console.error("Delete error:", err);
+      }
+    });
+  }
 }

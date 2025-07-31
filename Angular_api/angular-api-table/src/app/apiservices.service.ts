@@ -18,6 +18,11 @@ export class ApiServicesService {
   addPerson(payload: person): Observable<person>{
     return this.http.post<person>(this.apiUrl,payload);
 }
+
+updateUser(id: number, data: person): Observable<person> {
+  return this.http.put<person>(`${this.apiUrl}/${id}`, data);
+}
+
 deleteUser(userId: number): Observable<any> {
   return this.http.delete(`${this.apiUrl}/${userId}`);
 }
