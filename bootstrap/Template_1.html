@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <script src="./bootstrap/bootstrap.bundle.min.js"></script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    .page-container {
+      min-height: 100%;
+      position: relative;
+      padding-bottom: 60px; /* Space for footer */
+    }
+
+    .nav-link {
+      color: white;
+    }
+
+    .dashboard-box {
+      color: white;
+    }
+
+    .card1 { background-color: #01A89E; }
+    .card2 { background-color: #29aae3; }
+    .card3 { background-color: #EE704A; }
+    .card4 { background-color: #F8931F; }
+
+    .content-area {
+      background-color: white;
+      flex-wrap: wrap;
+    }
+
+    footer {
+      color: #888;
+      background-color: rgb(190, 189, 189);
+      height: 60px;
+    }
+
+    .navbar {
+      background-color: #363FA8;
+    }
+
+    .header1 {
+      background-color: #2E3192;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-container">
+   
+    <header class="w-100 bg-primary text-white">
+      <div class="header1">
+        <div class="container-fluid p-2">
+          <div class="w-100 d-flex flex-wrap align-items-center">
+            <div>
+              <img src="C:\Users\BHARATH GOWDA A\Downloads\img\main-logo.svg" class="px-3" height="30" alt="Logo">
+            </div>
+            <div class="username ms-auto text-end">
+              <div class="fw-bold">BHARATH GOWDA A</div>
+              <small>Hello Welcome</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="bg-primary">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <ul class="navbar-nav ms-3 flex-wrap">
+              <li class="nav-item px-3">
+                <a class="nav-link" href="#">DASHBOARD</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link" href="#">PROFILE</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link" href="#">CALENDAR</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link" href="#">REPORT</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link" href="#">SETTINGS</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link" href="#">HELP CENTER</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link" href="#">LOGOUT</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    
+    <div class="container my-5">
+      <div class="row g-4 text-center">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="dashboard-box card1 p-4">
+            <div>DASHBOARD ITEM 1</div>
+            <h3>28</h3>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="dashboard-box card2 p-4">
+            <div>DASHBOARD ITEM 2</div>
+            <h3>45</h3>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="dashboard-box card3 p-4">
+            <div>DASHBOARD ITEM 3</div>
+            <h3>124</h3>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="dashboard-box card4 p-4">
+            <div>DASHBOARD ITEM 4</div>
+            <h3>87</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   
+    <div class="container mb-5">
+      <div class="content-area w-100 d-flex flex-wrap align-items-start">
+        <img src="C:\Users\BHARATH GOWDA A\Downloads\img\data-img.jpg" class="img-fluid me-4 mb-3" style="max-width: 300px;" alt="Image">
+        <div class="flex-grow-1">
+          <h5 class="fw-bold">Your Heading</h5>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+            make a type specimen book. It has survived not only five centuries, but also the leap into electronic
+            typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+            sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
+            PageMaker.
+          </p>
+        </div>
+      </div>
+    </div>
+
+   
+    <footer class="text-center w-100 p-2 position-absolute bottom-0">
+      <p class="mb-0">Lorem Ipsum is simply dummy text</p>
+    </footer>
+  </div>
+</body>
+</html>
+<!-- RECENTLY CHANGED ONE  -->
